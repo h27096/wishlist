@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A few things on my wishlist. Find a gift and let everyone know when it’s purchased.">
+  <title>Henry’s wishlist</title><link rel="icon" href="assets/gift.svg"><link rel="stylesheet" href="style.css">
+  <script defer src="config.js"></script><script defer src="sample-items.js"></script><script defer src="shared.js"></script><script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to wishlist</a>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✳</span> THE WISHLIST</a><span class="top-note">A little inspiration for giving.</span></header>
+  <main id="main" class="shell">
+    <section class="intro"><div><p class="eyebrow">GOOD THINGS, PICKED OUT</p><h1 data-title>Henry’s wishlist</h1><p class="lead">A few things I’d love. If you pick something up,<br class="desktop-break"> mark it purchased so we can avoid doubles. Thank you!</p></div><div class="gift-mark" aria-hidden="true">🎁</div></section>
+    <div id="demo-banner" class="notice" hidden><strong>You’re viewing sample items.</strong> Try marking one purchased — changes stay in this browser only. <button id="reset-demo" class="text-button">Reset demo</button></div>
+    <div class="layout">
+      <section aria-labelledby="list-heading"><div class="section-heading"><h2 id="list-heading">On the list <span id="count" class="count">0</span></h2><span id="available-count" class="muted"></span></div><div id="items" class="items" aria-busy="true"><p class="empty">Loading the wishlist…</p></div></section>
+      <aside><section class="purchase-panel"><span class="mini-icon" aria-hidden="true">✓</span><h2>Picked something up?</h2><p>Let everyone know it’s taken care of. It’ll stay on the list, marked purchased.</p><form id="purchase-form"><label for="item-select">Which item did you buy?</label><select id="item-select" required disabled><option value="">Choose an item</option></select><button class="primary" id="purchase-button" disabled>Mark as purchased <span aria-hidden="true">↗</span></button></form><p class="small">Already marked the wrong item? Ask the wishlist owner to reset it.</p></section><p class="aside-note">A little thought goes a long way.<br>Thanks for being here. ♡</p></aside>
+    </div>
+    <p id="status" class="status" role="status" aria-live="polite"></p><button id="retry" class="secondary" hidden>Try loading again</button>
+  </main><footer class="footer"><span>Made for thoughtful giving.</span><span>♡</span></footer>
+  <dialog id="purchase-dialog" aria-labelledby="dialog-title"><form method="dialog"><p class="eyebrow">ONE LAST CHECK</p><h2 id="dialog-title">Mark this purchased?</h2><p id="confirm-name"></p><p>Only confirm if you’ve already bought it. Other visitors will see that it’s purchased.</p><div class="actions"><button value="cancel" class="secondary">Go back</button><button value="confirm" class="primary">Yes, I bought it</button></div></form></dialog>
+  <noscript><p class="notice">Please enable JavaScript to load this wishlist and mark purchases.</p></noscript>
+</body></html>
